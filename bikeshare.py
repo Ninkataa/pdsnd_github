@@ -1,10 +1,10 @@
 import time
 import pandas as pd
-# import numpy as np
+import numpy as np
 
-CITY_DATA = { 'chicago': 'chicago.csv',
-              'new york city': 'new_york_city.csv',
-              'washington': 'washington.csv' }
+CITY_DATA = {'chicago': 'chicago.csv',
+             'new york city': 'new_york_city.csv',
+             'washington': 'washington.csv'}
 
 def get_filters():
     """
@@ -18,10 +18,10 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
-       city = input('For which city you would like to see statistics(chicago, new york city, washington): ')
-       if city.lower() in ['chicago', 'new york city', 'washington']:
+        city = input('For which city you would like to see statistics(chicago, new york city, washington): ')
+        if city.lower() in ['chicago', 'new york city', 'washington']:
             break
-       else :
+        else:
             print('Please enter correct data.')
 
 
@@ -30,7 +30,7 @@ def get_filters():
         month = input('For which month you would like to see statistics(all, january, february, ... , june): ')
         if month.lower() in ['all', 'january', 'february','march','april','may','june']:
             break
-        else :
+        else:
             print('Please enter correct data.')
 
 
@@ -40,7 +40,7 @@ def get_filters():
         day = input('For which day of the week you would like to see statistics(all, monday, tuesday, ... sunday): ')
         if day.lower() in ['all','monday', 'tuesday','wednesday', 'thursday' , 'friday', 'saturday','sunday']:
             break
-        else :
+        else:
             print('Please enter correct data.')
 
 
@@ -193,7 +193,7 @@ def print_raw(df):
             break
         else:
             print(df[row: (row+5)])
-            row+=5
+            row += 5
 
 
 
@@ -216,4 +216,4 @@ def main():
 
 
 if __name__ == "__main__":
-	main()
+    main()
