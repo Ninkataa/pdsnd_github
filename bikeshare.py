@@ -2,9 +2,9 @@ import time
 import pandas as pd
 import numpy as np
 
-CITY_DATA = { 'chicago': 'chicago.csv',
-              'new york city': 'new_york_city.csv',
-              'washington': 'washington.csv' }
+CITY_DATA = {'chicago': 'chicago.csv',
+             'new york city': 'new_york_city.csv',
+             'washington': 'washington.csv'}
 
 def get_filters():
     """
@@ -18,30 +18,27 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
-       city = input('For which city you would like to see statistics(chicago, new york city, washington): ')
-       if city.lower() in ['chicago', 'new york city', 'washington']:
+        city = input('For which city you would like to see statistics(chicago, new york city, washington): ')
+        if city.lower() in ['chicago', 'new york city', 'washington']:
             break
-       else :
-            print('Please enter correct data.')
+        print('Please enter correct data.')
 
 
     # TO DO: get user input for month (all, january, february, ... , june    )
     while True:
         month = input('For which month you would like to see statistics(all, january, february, ... , june): ')
-        if month.lower() in ['all', 'january', 'february','march','april','may','june']:
+        if month.lower() in ['all', 'january', 'february', 'march', 'april', 'may', 'june']:
             break
-        else :
-            print('Please enter correct data.')
+        print('Please enter correct data.')
 
 
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
         day = input('For which day of the week you would like to see statistics(all, monday, tuesday, ... sunday): ')
-        if day.lower() in ['all','monday', 'tuesday','wednesday', 'thursday' , 'friday', 'saturday','sunday']:
+        if day.lower() in ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']:
             break
-        else :
-            print('Please enter correct data.')
+        print('Please enter correct data.')
 
 
 
@@ -191,9 +188,8 @@ def print_raw(df):
 
         if raw_data.lower() != 'yes':
             break
-        else:
-            print(df[row: (row+5)])
-            row+=5
+        print(df[row: (row+5)])
+        row += 5
 
 
 
@@ -217,4 +213,4 @@ def main():
 
 
 if __name__ == "__main__":
-	main()
+    main()
