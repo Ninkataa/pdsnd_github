@@ -28,7 +28,7 @@ def get_filters():
     # TO DO: get user input for month (all, january, february, ... , june    )
     while True:
         month = input('For which month you would like to see statistics(all, january, february, ... , june): ')
-        if month.lower() in ['all', 'january', 'february','march','april','may','june']:
+        if month.lower() in ['all', 'january', 'february', 'march', 'april', 'may', 'june']:
             break
         else:
             print('Please enter correct data.')
@@ -38,7 +38,7 @@ def get_filters():
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
         day = input('For which day of the week you would like to see statistics(all, monday, tuesday, ... sunday): ')
-        if day.lower() in ['all','monday', 'tuesday','wednesday', 'thursday' , 'friday', 'saturday','sunday']:
+        if day.lower() in ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']:
             break
         else:
             print('Please enter correct data.')
